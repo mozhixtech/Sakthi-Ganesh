@@ -1,0 +1,352 @@
+/* ==========================================================================
+   Sakthi Ganesh Textiles - Premium Showroom Stylesheet
+   Designed for High-End South Indian Silk & Fashion Retail
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Mukta+Malar:wght@400;600;700;800&display=swap');
+
+:root {
+  --primary-burgundy: #560a1d;
+  --primary-deep: #3b0512;
+  --primary-maroon: #731328;
+  --accent-gold: #c59b27;
+  --accent-gold-light: #f5e7b2;
+  --accent-gold-dark: #916e13;
+  --gold-gradient: linear-gradient(135deg, #d4af37 0%, #fae69e 50%, #b8860b 100%);
+  --gold-glow: 0 0 25px rgba(212, 175, 55, 0.35);
+  --wine-gradient: linear-gradient(135deg, #5b0a1d 0%, #36030e 100%);
+  --cream-bg: #faf7f2;
+  --cream-card: #ffffff;
+  --text-primary: #1f1a1c;
+  --text-muted: #6b6366;
+  --whatsapp-green: #25d366;
+  --whatsapp-green-dark: #128c7e;
+  --border-light: rgba(197, 155, 39, 0.22);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: var(--cream-bg);
+  color: var(--text-primary);
+  line-height: 1.6;
+  overflow-x: hidden;
+  text-rendering: optimizeLegibility;
+}
+
+/* Tamil Typography Class */
+.font-tamil {
+  font-family: 'Mukta Malar', 'Noto Sans Tamil', sans-serif !important;
+}
+
+.font-serif-luxury {
+  font-family: 'Playfair Display', 'Cinzel', Georgia, serif;
+}
+
+.font-heading {
+  font-family: 'Cinzel', 'Playfair Display', Georgia, serif;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 9px;
+}
+::-webkit-scrollbar-track {
+  background: #f1ebe1;
+}
+::-webkit-scrollbar-thumb {
+  background: #b58d34;
+  border-radius: 6px;
+  border: 2px solid #f1ebe1;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-maroon);
+}
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Gold Shimmer Text */
+.gold-text-gradient {
+  background: linear-gradient(135deg, #b8860b 0%, #e6ca65 40%, #996515 80%, #ffd700 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gold-text-shimmer {
+  background: linear-gradient(90deg, #d4af37 0%, #fff 50%, #d4af37 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmerText 3s linear infinite;
+}
+
+@keyframes shimmerText {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+/* Silk Ribbon & Borders */
+.silk-border-gold {
+  border: 1px solid rgba(212, 175, 55, 0.4);
+  box-shadow: 0 4px 20px rgba(86, 10, 29, 0.06);
+}
+
+.silk-badge {
+  background: linear-gradient(135deg, #6a1027 0%, #3e0513 100%);
+  color: #fff;
+  border: 1px solid rgba(212, 175, 55, 0.45);
+}
+
+/* Button & Pill Effects */
+.btn-gold {
+  background: var(--gold-gradient);
+  color: #2b0b13;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.28);
+}
+.btn-gold:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(212, 175, 55, 0.45);
+}
+
+.btn-burgundy {
+  background: var(--wine-gradient);
+  color: #fff;
+  font-weight: 600;
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.btn-burgundy:hover {
+  background: linear-gradient(135deg, #7a122a 0%, #4a0616 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(86, 10, 29, 0.25);
+}
+
+.btn-whatsapp {
+  background-color: var(--whatsapp-green);
+  color: white;
+  transition: all 0.3s ease;
+}
+.btn-whatsapp:hover {
+  background-color: var(--whatsapp-green-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.35);
+}
+
+/* Card Hover Animations */
+.product-card {
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  border-radius: 14px;
+  overflow: hidden;
+  background: #ffffff;
+}
+.product-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 36px rgba(86, 10, 29, 0.12);
+}
+
+.product-image-container {
+  position: relative;
+  overflow: hidden;
+  background-color: #f6f2ec;
+}
+.product-image-container img {
+  transition: transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.product-card:hover .product-image-container img {
+  transform: scale(1.07);
+}
+
+/* WhatsApp Pulse Animation */
+@keyframes pulseRing {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+  }
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 16px rgba(37, 211, 102, 0);
+  }
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+  }
+}
+
+.pulse-whatsapp {
+  animation: pulseRing 2.2s infinite;
+}
+
+/* Glassmorphism Classes */
+.glass-header {
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(212, 175, 55, 0.25);
+}
+
+.glass-dark {
+  background: rgba(43, 6, 14, 0.88);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+.modal-backdrop-blur {
+  background: rgba(18, 2, 6, 0.75);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+/* Ticker Marquee Animation */
+@keyframes marqueeLeft {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marqueeLeft 32s linear infinite;
+}
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+
+/* Mobile Bottom Navigation */
+.mobile-bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 64px;
+  background: rgba(255, 255, 255, 0.97);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-top: 1px solid rgba(212, 175, 55, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  z-index: 45;
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* Active Nav Links Indicator */
+.nav-link {
+  position: relative;
+  transition: color 0.2s ease;
+}
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 50%;
+  width: 0%;
+  height: 2px;
+  background: var(--gold-gradient);
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+
+/* Custom Tabs Active State */
+.filter-tab {
+  transition: all 0.25s ease;
+  border-bottom: 2px solid transparent;
+}
+.filter-tab.active {
+  color: var(--primary-burgundy);
+  border-color: var(--accent-gold);
+  background-color: #fff;
+  box-shadow: 0 4px 15px rgba(86, 10, 29, 0.08);
+  font-weight: 700;
+}
+
+/* Temple Gopuram & Indian Motif SVG Patterns */
+.bg-mandala {
+  background-image: radial-gradient(circle at 50% 50%, rgba(212, 175, 55, 0.06) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+.bg-silk-sheen {
+  background: linear-gradient(120deg, #fdfbf7 0%, #f7f1e7 50%, #fefcf9 100%);
+}
+
+/* Slide Drawer Animation */
+.drawer-right {
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.drawer-closed {
+  transform: translateX(100%);
+}
+.drawer-open {
+  transform: translateX(0%);
+}
+
+/* Toast Notification */
+.toast-container {
+  position: fixed;
+  bottom: 84px;
+  right: 24px;
+  z-index: 60;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  pointer-events: none;
+}
+.toast-card {
+  pointer-events: auto;
+  min-width: 290px;
+  max-width: 380px;
+  background: #ffffff;
+  border-left: 4px solid var(--accent-gold);
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  animation: slideInToast 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+@keyframes slideInToast {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Rating Star Style */
+.star-filled {
+  color: #f59e0b;
+}
+
+/* Hero Badge Glow */
+.badge-gold-glow {
+  border: 1px solid rgba(212, 175, 55, 0.6);
+  background: rgba(86, 10, 29, 0.85);
+  box-shadow: 0 0 16px rgba(212, 175, 55, 0.3);
+}
+
+/* Fallback for Image errors */
+.img-fallback-wrapper {
+  background: linear-gradient(135deg, #420815 0%, #751428 50%, #30030c 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: #f3e5ab;
+  text-align: center;
+}
